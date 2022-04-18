@@ -2,6 +2,7 @@ package com.example.rentcar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -61,8 +62,9 @@ public class Login extends AppCompatActivity {
                 Toast.makeText(Login.this, "Call api success", Toast.LENGTH_SHORT).show();
                 Employee employeeResult = response.body();
 
-                if(employeeResult != null) {
-                    result.setText(employeeResult.toString());
+                if(employeeResult.getUsername() != null) {
+                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    startActivity(intent);
                 }
             }
 
