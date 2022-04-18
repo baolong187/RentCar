@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/border.xml" value="0.204" />
+        <entry key="app/src/main/res/drawable/botron_edittext.xml" value="0.229" />
         <entry key="app/src/main/res/drawable/box.xml" value="0.249" />
         <entry key="app/src/main/res/drawable/boxinput.xml" value="0.249" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.229" />
+        <entry key="app/src/main/res/layout/activity_add_car.xml" value="0.22239583333333332" />
         <entry key="app/src/main/res/layout/activity_bill_detail.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_car_statistics.xml" value="0.37343358395989973" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.21637426900584794" />

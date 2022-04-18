@@ -21,16 +21,15 @@ public class Login extends AppCompatActivity {
 
     private EditText editName;
     private EditText editPass;
-    private TextView result;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        editName = findViewById(R.id.username);
+        editName = findViewById(R.id.name);
         editPass = findViewById(R.id.password);
         Button btnLogin = (Button) findViewById(R.id.btnLogin);
-        result = findViewById(R.id.result);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +58,7 @@ public class Login extends AppCompatActivity {
         ApiService.apiService.login(employee).enqueue(new Callback<Employee>() {
             @Override
             public void onResponse(Call<Employee> call, Response<Employee> response) {
-                Toast.makeText(Login.this, "Call api success", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Login.this, "Login success", Toast.LENGTH_SHORT).show();
                 Employee employeeResult = response.body();
 
                 if(employeeResult.getUsername() != null) {
@@ -70,7 +69,7 @@ public class Login extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Employee> call, Throwable t) {
-               result.setText(t.toString());
+                Toast.makeText(Login.this, "Username or password incorrect", Toast.LENGTH_SHORT).show();
             }
         });
     }
